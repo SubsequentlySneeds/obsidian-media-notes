@@ -38,6 +38,10 @@ If your plugin does not need CSS, delete this file.
 	}
 }
 
+.media-container.no-width-limit {
+	max-width: none;
+}
+
 .media-container-parent-vertical .markdown-source-view {
 	flex-direction: row !important;
 }
