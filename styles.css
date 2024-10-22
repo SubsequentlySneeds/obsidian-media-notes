@@ -365,3 +365,7 @@ If your plugin does not need CSS, delete this file.
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
+
+.subSettings {
+	margin-left: 40px;
+}

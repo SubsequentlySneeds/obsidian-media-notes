@@ -626,6 +626,21 @@ class SettingsTab extends PluginSettingTab {
 			);
 
 		new Setting(containerEl)
+			.setName("Disable video width limit")
+			.setClass("subSettings")
+			.setDesc(
+				"If enabled, in horizontal split mode the video player will expand to the width of the pane."
+			)
+			.addToggle((val) =>
+				val
+					.setValue(this.plugin.settings.disableWidthLimit)
+					.onChange(async (value) => {
+						this.plugin.settings.disableWidthLimit = value;
+						await this.plugin.saveSettings();
+					})
+			);
+
+		new Setting(containerEl)
 			.setName("Player width (%) in vertical-split mode")
 			.setDesc(
 				"The width of the player as a percentage of the viewport in vertical-split mode."
