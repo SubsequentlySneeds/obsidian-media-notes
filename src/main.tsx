@@ -134,7 +134,8 @@ export default class MediaNotesPlugin extends Plugin {
 
 	renderPlayerInView = (markdownView: MarkdownView) => {
 		// @ts-ignore TS2339
-		const frontmatter = (parseYaml(markdownView.rawFrontmatter) ??
+		const rawFrontmatter = markdownView.rawFrontmatter ?? "";
+		const frontmatter = (parseYaml(rawFrontmatter) ??
 			{}) as Record<string, string>;
 		// if there's a media_link
 		if (frontmatter && getMediaLinkFromFrontmatter(frontmatter)) {
