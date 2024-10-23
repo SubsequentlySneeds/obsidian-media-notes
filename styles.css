@@ -16,6 +16,7 @@ If your plugin does not need CSS, delete this file.
 .youtube-iframe {
 	height: 100%;
 	width: 100%;
+	overflow: clip;
 }
 
 .media-top-container {
