@@ -752,19 +752,5 @@ class SettingsTab extends PluginSettingTab {
 						await this.plugin.saveSettings();
 					})
 			);
-
-		new Setting(containerEl)
-			.setName("Disable width limit in horizontal split mode")
-			.setDesc(
-				"If enabled, in horizontal-split mode the video player will expand to the width of the pane"
-			)
-			.addToggle((val) =>
-				val
-					.setValue(this.plugin.settings.disableWidthLimit)
-					.onChange(async (value) => {
-						this.plugin.settings.disableWidthLimit = value;
-						await this.plugin.saveSettings();
-					})
-			);
 	}
 }
